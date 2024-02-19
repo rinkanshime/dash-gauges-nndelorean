@@ -126,7 +126,7 @@ void audio_setup()
 
     // Set resolution for volume pot
     analogReadResolution(POT_RESOLUTION);
-    //analogSetWidth(POT_RESOLUTION);         // ---------------------- FAIL HERE 
+    analogSetWidth(POT_RESOLUTION);         // ---------------------- FAIL HERE ON ESP32S2
 
     out = new AudioOutputI2S(0, 0, 32, 0);
     out->SetOutputModeMono(true);
